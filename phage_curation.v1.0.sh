@@ -72,7 +72,7 @@ cmd="prodigal -p meta \
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] $cmd"
 eval $cmd
 
-cmd="fetchMG/fetchMG.pl -m extraction -p $input.CCs-LCs.checkV.prodigal.faa -o $input.CCs-LCs.checkV.prodigal.fmg"
+cmd="database/fetchMG/fetchMG.pl -m extraction -p $input.CCs-LCs.checkV.prodigal.faa -o $input.CCs-LCs.checkV.prodigal.fmg"
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] $cmd"
 eval $cmd
 grep -v "#" $input.CCs-LCs.checkV.prodigal.fmg/$input.CCs-LCs.checkV.prodigal.all.marker_genes_scores.table | awk '{print $1}' | perl bin/contig_id_underbar.pl | sort | uniq > $input.CCs-LCs.checkV.prodigal.fmg.id
