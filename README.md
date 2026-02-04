@@ -1,15 +1,15 @@
 # Phage contigs curation
 This pipeline removes chromosomal or plasmid contigs from phage contigs obtained via metagenomic assembly (hybridSPAdes or metaSPAdes).
-Input contigs must be predicted as phage contigs by tools such as Virsorter2.
+Input contigs must be predicted as potential phage contigs by tools such as Virsorter2.
 This pipeline was developed in the ellie environment of the Laboratory for Symbiotic Microbiome Sciences, in RIKEN.
 
 # Dependencies
-seqkit (2.3.0)
-checkv (0.7.0)
-prodigal (V2.6.3)
-rnammer (1.2)
-minimap2 (2.24-r1122)
-diamond (2.1.21)
+- seqkit (2.3.0)
+- checkv (0.7.0)
+- prodigal (V2.6.3)
+- rnammer (1.2)
+- minimap2 (2.24-r1122)
+- diamond (2.1.21)
 
 # Set up in RIKEN ellie environment
 Clone git
