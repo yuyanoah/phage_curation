@@ -44,24 +44,24 @@ phage_curation.v1.0.sh input.fasta num_of_threads
 
 # Workflow of this pipeline
 ## STEP 1.
-Detect circular contigs for detecting potentially complete phage genomes
+Detect circular contigs for detecting potentially complete phage genomes.
 
 ## STEP 2.
-Check the contamination rate (CehckV) of circular phage condidate contigs
+Check the contamination rate of circular phage condidate contigs using CheckV.
 The cutoff is <10% contamination.
 
 ## STEP 3.
-Cehck the completeness and contamination of linear phage condidate contigs
+Cehck the completeness and contamination rate of linear phage condidate contigs using CheckV.
 The cutoff is >90% completeness and <10% contamination.
 
 ## STEP 4.
 Filter the potential bacterial chromosomal contigs.
-Contigs having >0 bacterial marker genes predicted by fetchMG are removed as chromosomal contigs.
-Contigs having >0 rRNA genes predicted by RNAmmer are removed as chromosomal contigs.
+Contigs having >0 bacterial marker genes, which are predicted using fetchMG, are removed as chromosomal contigs.
+Contigs having >0 rRNA genes, which are predicted using RNAmmer, are removed as chromosomal contigs.
 
 ## STEP 5.
 Filter the potential plasmid contigs.
-Contigs aligned with PLAD database with >70% identity and >10% covered fraction are removed as plasmid contigs.
+Contigs aligned with plasmid database with >70% identity and >10% covered fraction are removed as plasmid contigs.
 
 # Output
 Curated phage contigs: ~.CCs-LCs.checkV.rm_bacteria_plasmid.fasta
