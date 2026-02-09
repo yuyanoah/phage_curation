@@ -15,11 +15,13 @@ This pipeline was developed in the ellie environment of the Laboratory for Symbi
 Clone git
 ```
 git clone https://github.com/yuyanoah/phage_curation.git
+cd phage_curation
 ```
 Setup database
 ```
 Setup fetchMG database
-wget http://vm-lux.embl.de/~kultima/share/mOTU/fetchMGv1.0.tar.gz database
+wget http://vm-lux.embl.de/~kultima/share/mOTU/fetchMGv1.0.tar.gz
+mv fetchMGv1.0.tar.gz database/
 tar -xzvf database/fetchMGv1.0.tar.gz
 
 Download checkv database
