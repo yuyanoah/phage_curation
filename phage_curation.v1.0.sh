@@ -36,7 +36,7 @@ find $input.CCs -name "*.fa" | xargs cat | seqkit grep -v -f $input.CCs.id > $in
 
 # CheckV for LCs
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] ### CheckV for linear contigs with >90% completeness and <10% contamination ###"
-cmd="checkv end_to_end -t $th $input.LCs.fasta $input.LCs.checkV > $input.LCs.checkV.log 2>&1"
+cmd="checkv end_to_end -t $th $input.LCs.fasta $input.LCs.checkV -d database/checkv-db-v1.5 > $input.LCs.checkV.log 2>&1"
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] $cmd"
 eval $cmd
 cp $input.LCs.checkV/quality_summary.tsv $input.LCs.checkV.quality_summary.tsv
@@ -46,7 +46,7 @@ seqkit grep -f $input.LCs.checkV.quality_summary.comp90cont10.id $input.LCs.fast
 
 # CheckV for CCs
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] ### CheckV for circular contigs with <10% contamination ###"
-cmd="checkv end_to_end -t $th $input.CCs.fasta $input.CCs.checkV > $input.CCs.checkV.log 2>&1"
+cmd="checkv end_to_end -t $th $input.CCs.fasta $input.CCs.checkV -d database/checkv-db-v1.5 > $input.CCs.checkV.log 2>&1"
 echo "[`date +'%Y/%m/%d %H:%M:%S'`] $cmd"
 eval $cmd
 cp $input.CCs.checkV/quality_summary.tsv $input.CCs.checkV.quality_summary.tsv
