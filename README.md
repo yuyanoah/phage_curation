@@ -24,6 +24,9 @@ wget http://vm-lux.embl.de/~kultima/share/mOTU/fetchMGv1.0.tar.gz
 mv fetchMGv1.0.tar.gz database/
 tar -xzvf database/fetchMGv1.0.tar.gz -C database/
 
+Download CheckV database
+checkv download_database database/
+
 Please download plasmid and plasmid-enriched Pfam from here into "database" directory.
 https://doi.org/10.5281/zenodo.18465132
 
