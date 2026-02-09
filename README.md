@@ -22,7 +22,7 @@ Setup database
 Setup fetchMG database
 wget http://vm-lux.embl.de/~kultima/share/mOTU/fetchMGv1.0.tar.gz
 mv fetchMGv1.0.tar.gz database/
-tar -xzvf database/fetchMGv1.0.tar.gz
+tar -xzvf database/fetchMGv1.0.tar.gz -C database/
 
 Download checkv database
 checkv download_database database/
