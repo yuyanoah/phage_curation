@@ -104,6 +104,7 @@ while(<>){
         print "$q_id\t$ref_id\t$id_ave\t$q_cov\n";
         $q_id = $array[0];
         $ref_id = $array[5];
+        $align_beg = $array[2];
         $align_end = $array[3];
         $q_length = $array[1];
         $align_sum = $align_sum + $array[3] - $array[2];
@@ -130,6 +131,7 @@ while(<>){
         print "$q_id\t$ref_id\t$id_ave\t$q_cov\n";
         $q_id = $array[0];
         $ref_id = $array[5];
+        $align_beg = $array[2];
         $align_end = $array[3];
         $q_length = $array[1];
         $align_sum = $align_sum + $array[3] - $array[2];
