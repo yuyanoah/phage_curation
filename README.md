@@ -41,7 +41,7 @@ minimap2 -d database/refseq_plasmid_release202.plasmid71.mmi database/refseq_pla
 # Usage
 Run the below command.
 ```
-./phage_curation.v1.0.sh input.fasta num_of_threads
+./phage_curation input.fasta num_of_threads
 ```
 
 # Workflow of this pipeline
@@ -63,7 +63,7 @@ Contigs having >0 rRNA genes, which are predicted using RNAmmer, are removed as 
 
 ## STEP 5.
 Filter the potential plasmid contigs.
-Contigs aligned with plasmid database with >70% identity and >10% covered fraction are removed as plasmid contigs.
+Contigs aligned with plasmid database with >70% identity and >10% covered fraction are removed as plasmid contigs. Additionally, Contigs having plasmid-enriched COGs with >50% identity and >50% covered fraction are removed as plasmid contigs.
 
 # Output
 Curated phage contigs: ~.CCs-LCs.checkV.rm_bacteria_plasmid.fasta
